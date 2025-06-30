@@ -1,23 +1,16 @@
 package io.github.aguilasa.quizmanager.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
-
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@SuperBuilder
-public class QuestionnaireDTO extends BaseDTO {
-    private UUID id;
-    private String title;
-    private String description;
-    private UUID createdById;
-    private String createdByUsername;
-    private Integer questionCount;
+public record QuestionnaireDTO(
+    UUID id,
+    String title,
+    String description,
+    UUID createdById,
+    String createdByUsername,
+    Integer questionCount,
+    OffsetDateTime createdAt,
+    OffsetDateTime updatedAt
+) {
 }
