@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Testcontainers
-@ActiveProfiles("testcontainers")
+@ActiveProfiles("test")
 @Slf4j
 public class PostgresqlIntegrationTest {
 
