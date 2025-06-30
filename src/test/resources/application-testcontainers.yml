@@ -1,14 +1,10 @@
 spring:
-  application:
-    name: quizmanager
   datasource:
-    url: jdbc:postgresql://localhost:5432/quiz
-    username: postgres
-    password: postgres
+    # URL será substituída dinamicamente pelo Testcontainers
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: none
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -30,3 +26,4 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.springframework.jdbc.core: TRACE
     io.github.aguilasa.quizmanager: DEBUG
+    org.testcontainers: INFO
